@@ -1,0 +1,6 @@
+This repo contains small LLVM-related programs.
+
+* glob-jit
+This program jit-compile the function to match a 'glob' pattern, perform manual construction of specialized version of this function and executes.
+To Do:
+- Check the construction of Clang AST instead of LLVM IR on the fly. This might be a little easier to implement. Another way is to generate LLVM IR from the 'source code'.
