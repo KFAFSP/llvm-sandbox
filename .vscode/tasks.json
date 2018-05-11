@@ -1,0 +1,42 @@
+{
+    // See https://go.microsoft.com/fwlink/?LinkId=733558
+    // for the documentation about the tasks.json format
+    "version": "2.0.0",
+    "tasks": [
+        {
+            "label": "make",
+            "group": "build",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build"
+            },
+            "command": "make -j 4",
+            "presentation": {
+                "echo": true,
+                "reveal": "always",
+                "focus": false,
+                "panel": "dedicated"
+            },
+            "problemMatcher": {
+                "base": "$gcc",
+                "fileLocation": "absolute"
+            }
+        },
+        {
+            "label": "run glob-jit",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build/glob-jit"
+            },
+            "command": "./main"
+        },
+        {
+            "label": "run bm-jit",
+            "type": "shell",
+            "options": {
+                "cwd": "${workspaceRoot}/build/bm-jit"
+            },
+            "command": "./bm-jit"
+        }
+    ]
+}
