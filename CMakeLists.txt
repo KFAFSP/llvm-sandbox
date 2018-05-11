@@ -22,3 +22,4 @@ add_definitions(${LLVM_DEFINITIONS})
 llvm_map_components_to_libnames(llvm_libs core native mcjit orcjit)
 
 add_subdirectory(glob-jit)
+add_subdirectory(bm-jit)

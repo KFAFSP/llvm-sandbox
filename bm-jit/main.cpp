@@ -38,6 +38,8 @@
 #include "llvm/Transforms/Scalar/GVN.h"
 #include "llvm/Transforms/Scalar/SimplifyCFG.h"
 
+#include "FunctionSpecialization.h"
+
 /** Function type declaration for string matchers.
  */
 using MatchFunction = bool(const char*);
@@ -117,9 +119,7 @@ int main(int argc, char** argv)
     // Initialize LLVM for current machine target.
     llvm::InitializeNativeTarget();
     llvm::InitializeNativeTargetAsmPrinter();
-    llvm::InitializeNativeTargetAsmParser();
-
-    
+    llvm::InitializeNativeTargetAsmParser();    
 
     return 0;
 }
